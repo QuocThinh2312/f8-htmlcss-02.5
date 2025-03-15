@@ -502,3 +502,126 @@ a {
     font-weight: 400;
     line-height: normal;
 }
+
+/* Feedback */
+.feedback {
+    margin-top: 264px;
+}
+
+.feedback .body {
+    display: flex;
+}
+
+.feedback .text {
+    width: 35.8%;
+    padding: 37px 0;
+}
+
+.feedback blockquote {
+    margin: 27px 0 33px;
+    color: #5d6564;
+    font-size: 3.2rem;
+    font-weight: 400;
+    line-height: 4.8rem;
+}
+
+.feedback .author {
+    display: flex;
+    align-items: center;
+    gap: 0 5px;
+    color: #767e7e;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.feedback .author::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 2px;
+    background: #070707;
+}
+
+.feedback .author cite {
+    color: #070707;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.feedback .control {
+    display: flex;
+    gap: 30px;
+    margin-top: 52px;
+}
+
+.feedback .control-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--primary-color);
+}
+
+.feedback .control-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+}
+
+.feedback .avatar-group {
+    position: relative;
+    width: 64.2%;
+}
+
+.feedback .avatar-group .avatar {
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.feedback .avatar-group .avatar:first-child {
+    position: absolute;
+    top: 107px;
+    right: 171px;
+    width: 235px;
+    height: 235px;
+}
+
+.feedback .avatar-group .avatar:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 443px;
+    width: 92px;
+    height: 92px;
+}
+
+.feedback .avatar-group .avatar:nth-child(3) {
+    position: absolute;
+    top: 19px;
+    right: 0;
+    width: 110px;
+    height: 110px;
+}
+
+.feedback .avatar-group .avatar:nth-child(4) {
+    position: absolute;
+    top: 258px;
+    right: 601px;
+}
+
+.feedback .avatar-group .avatar:nth-child(5) {
+    position: absolute;
+    right: 389px;
+    bottom: 0;
+}
+
+.feedback .avatar-group .avatar:last-child {
+    position: absolute;
+    right: 32px;
+    bottom: 29px;
+}
