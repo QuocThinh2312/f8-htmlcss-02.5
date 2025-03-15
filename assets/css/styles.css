@@ -84,23 +84,23 @@ a {
     font-weight: 600;
 }
 
-.header .cta {
+.header .cta-group {
     display: flex;
     align-items: center;
     gap: 24px;
 }
 
-.header .cta a:first-child {
+.header .cta-group a:first-child {
     color: #494949;
     font-weight: 400;
 }
 
-.header .cta a:first-child:hover {
+.header .cta-group a:first-child:hover {
     color: #2f3a3b;
     font-weight: 600;
 }
 
-.header .cta .btn {
+.header .cta-group .btn {
     min-width: 108px;
     height: 48px;
     border: 1px solid var(--primary-color);
@@ -112,7 +112,7 @@ a {
     line-height: 48px;
 }
 
-.header .cta .btn:hover {
+.header .cta-group .btn:hover {
     border: none;
     background: var(--primary-color);
     color: #fff;
@@ -624,4 +624,94 @@ a {
     position: absolute;
     right: 32px;
     bottom: 29px;
+}
+
+/* Call To Action */
+.cta {
+    padding: 76px 0 88px;
+    margin-top: 130px;
+    background: #def6f5;
+}
+
+.cta .body {
+    display: flex;
+    align-items: center;
+    gap: 410px;
+}
+
+.cta .heading {
+    color: #070707;
+    font-size: 4.2rem;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.cta .desc {
+    margin-top: 18px;
+    color: #767e7e;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Footer */
+.footer {
+    padding: 131px 0 50px;
+}
+
+.footer .body {
+    display: flex;
+    gap: 128px;
+}
+
+.footer .title {
+    margin-bottom: 18px;
+    color: #2e2e2e;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.footer .title:not(:last-child) {
+    margin-bottom: 26px;
+}
+
+.footer .list a,
+.footer span {
+    display: inline-block;
+    color: #535353;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.footer .list a {
+    margin-bottom: 18px;
+}
+
+.footer .list a:hover {
+    color: #2e2e2e;
+    text-decoration: underline;
+}
+
+.footer .socials .row {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding-right: 10px;
+    margin-bottom: 18px;
+}
+
+.footer .socials .row:hover {
+    border-radius: 999px;
+    background: #e9e9e9;
+    cursor: pointer;
+}
+
+.footer .copyright p {
+    margin-top: 80px;
+    color: #b0b5b4;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
 }
