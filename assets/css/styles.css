@@ -279,11 +279,6 @@ a {
     margin-top: 130px;
 }
 
-.features .content {
-    width: 1024px;
-    margin-left: 24px;
-}
-
 .features-top {
     width: 58%;
     margin-bottom: 80px;
@@ -314,11 +309,15 @@ a {
 }
 
 .features-list .features-item:first-child {
-    width: 37%;
+    width: 32.22%;
 }
 
 .features-list .features-item:nth-child(2) {
-    width: 41.3%;
+    width: 36.15%;
+}
+
+.features-list .features-item:last-child {
+    width: 31.63%;
 }
 
 .features-item .title {
@@ -489,6 +488,10 @@ a {
     gap: 200px;
 }
 
+.qty-item {
+    text-align: center;
+}
+
 .qty strong {
     color: var(--secondary-color);
     font-size: 6.2rem;
@@ -514,7 +517,7 @@ a {
 }
 
 .feedback .text {
-    width: 35.8%;
+    width: 42%;
     padding: 37px 0;
 }
 
@@ -575,7 +578,7 @@ a {
 
 .feedback .avatar-group {
     position: relative;
-    width: 64.2%;
+    width: 58%;
 }
 
 .feedback .avatar-group .avatar {
@@ -588,7 +591,7 @@ a {
 .feedback .avatar-group .avatar:first-child {
     position: absolute;
     top: 107px;
-    right: 171px;
+    right: 164px;
     width: 235px;
     height: 235px;
 }
@@ -596,7 +599,7 @@ a {
 .feedback .avatar-group .avatar:nth-child(2) {
     position: absolute;
     top: 0;
-    right: 443px;
+    right: 430px;
     width: 92px;
     height: 92px;
 }
@@ -612,18 +615,18 @@ a {
 .feedback .avatar-group .avatar:nth-child(4) {
     position: absolute;
     top: 258px;
-    right: 601px;
+    right: 576px;
 }
 
 .feedback .avatar-group .avatar:nth-child(5) {
     position: absolute;
-    right: 389px;
+    right: 373px;
     bottom: 0;
 }
 
 .feedback .avatar-group .avatar:last-child {
     position: absolute;
-    right: 32px;
+    right: 31px;
     bottom: 29px;
 }
 
