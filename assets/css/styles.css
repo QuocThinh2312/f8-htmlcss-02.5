@@ -476,3 +476,29 @@ a {
     margin-right: 10px;
     background: var(--primary-color);
 }
+
+/* Quantities */
+.qty {
+    margin-top: 389px;
+}
+
+.qty-list {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+}
+
+.qty strong {
+    color: var(--secondary-color);
+    font-size: 6.2rem;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.qty .desc {
+    margin-top: 11px;
+    color: #767e7e;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: normal;
+}
