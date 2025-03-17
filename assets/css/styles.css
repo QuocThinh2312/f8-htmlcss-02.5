@@ -73,15 +73,15 @@ a {
     display: flex;
 }
 
-.nav ul a {
+.nav-link {
     padding: 8px 19.5px;
     color: #2f3a3b;
     font-weight: 400;
 }
 
-.nav ul a:hover {
-    color: #2f3a3b;
-    font-weight: 600;
+.nav-link:hover,
+.header-cta:hover {
+    text-shadow: 0.7px 0 0 #2f3a3b;
 }
 
 .header .cta-group {
@@ -90,17 +90,16 @@ a {
     gap: 24px;
 }
 
-.header .cta-group a:first-child {
+.header-cta {
     color: #494949;
     font-weight: 400;
 }
 
-.header .cta-group a:first-child:hover {
-    color: #2f3a3b;
+.header-cta::before:hover {
     font-weight: 600;
 }
 
-.header .cta-group .btn {
+.header-btn {
     min-width: 108px;
     height: 48px;
     border: 1px solid var(--primary-color);
@@ -112,7 +111,7 @@ a {
     line-height: 48px;
 }
 
-.header .cta-group .btn:hover {
+.header-btn:hover {
     border: none;
     background: var(--primary-color);
     color: #fff;
@@ -163,7 +162,7 @@ a {
     gap: 50px;
 }
 
-.hero .cta-group .watch {
+.hero .watch {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -174,20 +173,17 @@ a {
     background: #fff;
 }
 
-.hero .cta-group .watch:hover {
+.hero .watch:hover {
     box-shadow: 0px 16px 65px 1px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
 
-.hero .images {
+.hero-right {
+    position: relative;
     width: 54.79%;
 }
 
-.hero-right {
-    position: relative;
-}
-
-.hero-right .images img {
+.hero-right .hero-images img {
     display: block;
     width: 576px;
     height: 631px;
@@ -195,10 +191,10 @@ a {
     object-fit: cover;
 }
 
-.hero-right .courses {
+.hero-right .hero-courses {
     position: absolute;
     top: 149px;
-    left: -15px;
+    left: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -209,10 +205,10 @@ a {
     box-shadow: 0px 10px 80px 0px rgba(0, 0, 0, 0.05);
 }
 
-.hero-right .schedules {
+.hero-right .hero-schedules {
     position: absolute;
     bottom: 46px;
-    left: -24.85px;
+    left: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -230,21 +226,21 @@ a {
     font-weight: 500;
 }
 
-.hero-right .schedules img:first-of-type {
+.hero-right .hero-schedules img:first-of-type {
     margin: 16px 0 12px;
 }
 
-.hero-right .schedules img:nth-of-type(2) {
+.hero-right .hero-schedules img:nth-of-type(2) {
     margin-bottom: 10px;
 }
 
-.hero-right .schedules img:nth-of-type(3) {
+.hero-right .hero-schedules img:nth-of-type(3) {
     margin-bottom: 16px;
 }
 
-.hero-right .active {
+.hero-right .hero-active {
     position: absolute;
-    right: 45px;
+    right: 43px;
     bottom: 41px;
     width: 207px;
     height: 90px;
@@ -259,7 +255,7 @@ a {
     margin-top: 8px;
 }
 
-.hero-right .active .avatar {
+.hero-right .avatar {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -280,7 +276,7 @@ a {
 }
 
 .features-top {
-    width: 58%;
+    width: 50.5%;
     margin-bottom: 80px;
 }
 
@@ -302,6 +298,7 @@ a {
     color: #767e7e;
     font-size: 1.8rem;
     font-weight: 400;
+    line-height: normal;
 }
 
 .features-list {
@@ -581,14 +578,14 @@ a {
     width: 58%;
 }
 
-.feedback .avatar-group .avatar {
+.feedback .avatar {
     width: 78px;
     height: 78px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.feedback .avatar-group .avatar:first-child {
+.feedback .avatar:first-child {
     position: absolute;
     top: 107px;
     right: 164px;
@@ -596,7 +593,7 @@ a {
     height: 235px;
 }
 
-.feedback .avatar-group .avatar:nth-child(2) {
+.feedback .avatar:nth-child(2) {
     position: absolute;
     top: 0;
     right: 430px;
@@ -604,7 +601,7 @@ a {
     height: 92px;
 }
 
-.feedback .avatar-group .avatar:nth-child(3) {
+.feedback .avatar:nth-child(3) {
     position: absolute;
     top: 19px;
     right: 0;
@@ -612,19 +609,19 @@ a {
     height: 110px;
 }
 
-.feedback .avatar-group .avatar:nth-child(4) {
+.feedback .avatar:nth-child(4) {
     position: absolute;
     top: 258px;
     right: 576px;
 }
 
-.feedback .avatar-group .avatar:nth-child(5) {
+.feedback .avatar:nth-child(5) {
     position: absolute;
     right: 373px;
     bottom: 0;
 }
 
-.feedback .avatar-group .avatar:last-child {
+.feedback .avatar:last-child {
     position: absolute;
     right: 31px;
     bottom: 29px;
@@ -688,20 +685,24 @@ a {
     line-height: normal;
 }
 
-.footer .list a {
+.footer-link {
     margin-bottom: 18px;
 }
 
-.footer .list a:hover {
+.footer-link:hover {
     color: #2e2e2e;
     text-decoration: underline;
+}
+
+.footer .socials {
+    margin-left: -10px;
 }
 
 .footer .socials .row {
     display: flex;
     align-items: center;
     gap: 9px;
-    padding-right: 10px;
+    padding: 0 10px;
     margin-bottom: 18px;
 }
 
