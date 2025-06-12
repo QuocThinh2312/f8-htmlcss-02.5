@@ -17,13 +17,17 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.6rem;
 }
 
 /* Common */
 a {
     text-decoration: none;
+}
+
+img {
+    display: block;
 }
 
 .content {
@@ -62,11 +66,7 @@ a {
 .header .body {
     display: flex;
     align-items: center;
-}
-
-.nav {
-    margin-right: 177px;
-    margin-left: auto;
+    justify-content: space-between;
 }
 
 .nav ul {
@@ -76,7 +76,6 @@ a {
 .nav-link {
     padding: 8px 19.5px;
     color: #2f3a3b;
-    font-weight: 400;
 }
 
 .nav-link:hover,
@@ -92,7 +91,6 @@ a {
 
 .header-cta {
     color: #494949;
-    font-weight: 400;
 }
 
 .header-cta::before:hover {
@@ -106,7 +104,6 @@ a {
     border-radius: 6px;
     background-color: transparent;
     color: var(--primary-color);
-    font-size: 1.6rem;
     font-weight: 600;
     line-height: 48px;
 }
@@ -126,20 +123,17 @@ a {
 
 .hero .body {
     display: flex;
-}
-
-.hero .hero-left {
-    width: 45.21%;
-    padding: 93px 0;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .hero span {
     color: #767e7e;
     font-size: 1.4rem;
-    font-weight: 400;
 }
 
 .hero .heading {
+    max-width: 458px;
     margin: 18px 0 46px;
     color: var(--secondary-color);
     font-size: 6.2rem;
@@ -148,16 +142,15 @@ a {
 }
 
 .hero .desc {
-    width: 82%;
+    max-width: 374px;
     margin-bottom: 52px;
     color: #9da6a5;
     font-size: 1.8rem;
-    font-weight: 400;
     line-height: 3.2rem;
 }
 
 .hero .cta-group {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 50px;
 }
@@ -171,30 +164,25 @@ a {
     border: none;
     border-radius: 50%;
     background: #fff;
-}
-
-.hero .watch:hover {
     box-shadow: 0px 16px 65px 1px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
 
 .hero-right {
     position: relative;
-    width: 54.79%;
+    width: 49.23%;
 }
 
-.hero-right .hero-images img {
+.hero-img {
     display: block;
-    width: 576px;
+    width: 100%;
     height: 631px;
-    margin-left: auto;
     object-fit: cover;
 }
 
 .hero-right .hero-courses {
     position: absolute;
-    top: 149px;
-    left: 24px;
+    inset: 149px auto auto -40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -207,8 +195,7 @@ a {
 
 .hero-right .hero-schedules {
     position: absolute;
-    bottom: 46px;
-    left: 0px;
+    inset: auto auto 46px -65px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -297,7 +284,6 @@ a {
 .features-top .desc {
     color: #767e7e;
     font-size: 1.8rem;
-    font-weight: 400;
     line-height: normal;
 }
 
@@ -327,7 +313,6 @@ a {
 .features-item .desc {
     max-width: 224px;
     color: #9da6a5;
-    font-weight: 400;
     line-height: 2.7rem;
 }
 
@@ -363,7 +348,6 @@ a {
     max-width: 525px;
     color: #767e7e;
     font-size: 1.8rem;
-    font-weight: 400;
     line-height: 3.2rem;
 }
 
@@ -396,7 +380,7 @@ a {
 }
 
 .courses-item .thumb::after {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     background: #d0efed;
@@ -435,8 +419,6 @@ a {
 .courses-item .price {
     margin: 16px 0 6px;
     color: #767e7e;
-    font-weight: 400;
-    line-height: normal;
 }
 
 .courses-item .price strong {
@@ -449,7 +431,6 @@ a {
 .courses-item .desc {
     color: #9da6a5;
     font-size: 1.4rem;
-    font-weight: 400;
     line-height: normal;
 }
 
@@ -465,7 +446,7 @@ a {
 }
 
 .courses-item .row .desc::before {
-    content: '';
+    content: "";
     display: inline-block;
     width: 6px;
     height: 6px;
@@ -500,8 +481,6 @@ a {
     margin-top: 11px;
     color: #767e7e;
     font-size: 1.8rem;
-    font-weight: 400;
-    line-height: normal;
 }
 
 /* Feedback */
@@ -522,21 +501,18 @@ a {
     margin: 27px 0 33px;
     color: #5d6564;
     font-size: 3.2rem;
-    font-weight: 400;
     line-height: 4.8rem;
 }
 
 .feedback .author {
     display: flex;
     align-items: center;
-    gap: 0 5px;
+    column-gap: 5px;
     color: #767e7e;
-    font-weight: 400;
-    line-height: normal;
 }
 
 .feedback .author::before {
-    content: '';
+    content: "";
     display: inline-block;
     width: 8px;
     height: 2px;
@@ -637,7 +613,7 @@ a {
 .cta .body {
     display: flex;
     align-items: center;
-    gap: 410px;
+    justify-content: space-between;
 }
 
 .cta .heading {
@@ -645,14 +621,19 @@ a {
     font-size: 4.2rem;
     font-weight: 700;
     line-height: normal;
+    text-align: center;
 }
 
 .cta .desc {
     margin-top: 18px;
     color: #767e7e;
     font-size: 1.8rem;
-    font-weight: 400;
     line-height: normal;
+    text-align: center;
+}
+
+.cta-btn {
+    margin-right: 154px;
 }
 
 /* Footer */
@@ -662,7 +643,7 @@ a {
 
 .footer .body {
     display: flex;
-    gap: 128px;
+    justify-content: space-between;
 }
 
 .footer .title {
@@ -681,7 +662,6 @@ a {
 .footer span {
     display: inline-block;
     color: #535353;
-    font-weight: 400;
     line-height: normal;
 }
 
@@ -716,7 +696,5 @@ a {
     margin-top: 80px;
     color: #b0b5b4;
     font-size: 1.8rem;
-    font-weight: 400;
-    line-height: normal;
     text-align: center;
 }

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Online Learning Landing Page</title>
 
         <!-- Reset CSS -->
         <link rel="stylesheet" href="./assets/css/reset.css" />
@@ -96,28 +96,45 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="./assets/css/styles.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
     </head>
     <body>
         <!-- Header -->
         <header class="header">
             <div class="content">
                 <div class="body">
+                    <!-- Tablet/Mobile Menu -->
+                    <label for="menu-checkbox" class="toggle-menu hide-on-pc">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                        >
+                            <path
+                                fill="currentColor"
+                                d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                            />
+                        </svg>
+                    </label>
+
+                    <!-- Logo -->
                     <a href="#">
                         <img
-                            src="./assets/img/logo.png"
+                            src="./assets/img/logo.svg"
                             alt="Besnik."
                             class="logo"
                         />
                     </a>
-                    <nav class="nav">
+
+                    <!-- Navigation -->
+                    <nav class="nav show-on-pc">
                         <ul>
                             <li>
                                 <a class="nav-link" href="#">Home</a>
                             </li>
                             <li>
-                                <a class="nav-link" href="#features"
-                                    >Features</a
-                                >
+                                <a class="nav-link" href="#features">
+                                    Features
+                                </a>
                             </li>
                             <li>
                                 <a class="nav-link" href="#pricing">Pricing</a>
@@ -130,11 +147,58 @@
                             </li>
                         </ul>
                     </nav>
+
+                    <!-- CTA -->
                     <div class="cta-group">
                         <a class="header-cta" href="#!">Sign in</a>
                         <a href="#!" class="btn header-btn">Sign up</a>
                     </div>
                 </div>
+            </div>
+        </header>
+
+        <!-- Tablet/Mobile Header -->
+        <header class="mobile-header hide-on-pc">
+            <input
+                type="checkbox"
+                name="menu-checkbox"
+                id="menu-checkbox"
+                class="menu-checkbox"
+                hidden
+            />
+
+            <!-- Overlay -->
+            <label for="menu-checkbox" class="menu-overlay"></label>
+
+            <!-- Drawer -->
+            <div class="menu-drawer">
+                <a href="#">
+                    <img src="./assets/img/logo.svg" alt="Besnik." />
+                </a>
+
+                <ul>
+                    <li>
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#features"> Features </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#pricing">Pricing</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li>
+                        <a class="nav-link show-on-sm" href="#!">Sign in</a>
+                    </li>
+                    <li>
+                        <a class="nav-link show-on-sm" href="#!">Sign up</a>
+                    </li>
+                </ul>
             </div>
         </header>
 
@@ -158,13 +222,12 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="hero-right">
-                            <div class="hero-images">
-                                <img
-                                    src="./assets/img/hero-img.jpg"
-                                    alt="Words learner come here."
-                                />
-                            </div>
+                        <div class="hero-right show-on-pc">
+                            <img
+                                src="./assets/img/hero-img.jpg"
+                                alt="Words learner come here."
+                                class="hero-img"
+                            />
                             <div class="hero-courses">
                                 <img
                                     src="./assets/img/hero-courses.svg"
@@ -286,7 +349,9 @@
                                 Check out our most poular courses that suit for
                                 you. Here you can find your favourite one.
                             </p>
-                            <a href="#!" class="link">View All Courses</a>
+                            <a href="#!" class="link hide-on-sm">
+                                View All Courses
+                            </a>
                         </div>
                     </div>
                     <ul class="courses-list">
@@ -354,6 +419,11 @@
                             </div>
                         </li>
                     </ul>
+                    <div class="pricing-btn-wrap">
+                        <a href="#!" class="btn pricing-btn">
+                            View All Courses
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -431,7 +501,7 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="avatar-group">
+                        <div class="avatar-group show-on-pc">
                             <img
                                 src="./assets/img/avatar-1.jpg"
                                 alt=""
@@ -477,7 +547,7 @@
                                 Create your account and Boost your Career.
                             </p>
                         </div>
-                        <a href="#!" class="btn">Get Started</a>
+                        <a href="#!" class="btn cta-btn">Get Started</a>
                     </div>
                 </div>
             </div>
@@ -489,7 +559,7 @@
                 <div class="body">
                     <div class="column">
                         <a href="#"
-                            ><img src="./assets/img/logo.png" alt="Besnik."
+                            ><img src="./assets/img/logo.svg" alt="Besnik."
                         /></a>
                     </div>
                     <div class="column">
@@ -529,14 +599,14 @@
                         <h3 class="title">Teaching</h3>
                         <ul class="list">
                             <li class="item">
-                                <a class="footer-link" href="#!"
-                                    >Become a teacher</a
-                                >
+                                <a class="footer-link" href="#!">
+                                    Become a teacher
+                                </a>
                             </li>
                             <li class="item">
-                                <a class="footer-link" href="#!"
-                                    >Teaching academy</a
-                                >
+                                <a class="footer-link" href="#!">
+                                    Teaching academy
+                                </a>
                             </li>
                         </ul>
                     </div>
